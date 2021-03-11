@@ -4,45 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculation</title>
-    <script>
-      function Calculation() {
-        let number1 = prompt(document.getElementById("number").value);
-        let number2 = propmt(document.getElementById("number").value);
-        let result1 = sum(number2, number2);
-        let result2 = difference(number1, number2);
-        let result3 = Product(number1, number2);
-        document.getElementById("output").innerHTML =
-          result1 + " " + result2 + " " + result3;
-      }
-      function sum(number1, number2) {
-        let result = number1 + number2;
-        alert(result);
-      }
-      function difference(number1, number2) {
-        let result = number1 - number2;
-        alert(result);
-      }
-      function Product(number1, number2) {
-        let result = number1 * number2;
-        alert(result);
-      }
-    </script>
-  </head>
-  <body>
-    first number1:<br /><input type="text" id="number1Input" size="20" />
+    <title>Calculation</title></head>
+    <body>
+    first number1:<br /><input type="text" id="number1" size="20" />
     <br /><br />
-    second number2:<br /><input type="text" id="number1Input" size="20" />
+    second number2:<br /><input type="text" id="number2" size="20" />
     <br /><br />
     operation:<br /><br />
-    <button type="button" onclick="sum()">+</button>
+    <button  onclick="sum()">+</button>
+    <button  onclick="difference()">-</button>
+    <button onclick="Product()">x</button> <br /><br />
+    Result:<input type="text" id="Result" size="20"></button>
  
-    <button type="button" onclick="difference()">-</button>
- 
-    <button type="button" onclick="Product()">x</button>> <br /><br />Result:
- 
-    <br />
-    <div id="output"></div>
+    
+    <script>
+      function sum(number1, number2) {
+        let number1=Number(document.getElementById("number1").value);
+        let number2=Number(document.getElementById("number2").value);
+        document.getElementById("Result").value=number1+number2;
+      
+      }
+      function difference(number1, number2) {
+        let number1=Number(document.getElementById("number1").value);
+        let number2=Number(document.getElementById("number2").value);
+        document.getElementById("Result").value=number1-number2;
+      }
+      function Product(number1, number2) {
+        let number1=Number(document.getElementById("number1").value);
+        let number2=Number(document.getElementById("number2").value);
+        document.getElementById("Result").value=number1*number2;
+      }
+    </script>
+  
     <p><a href="home.html">home</a></p>
   </body>
 </html>
