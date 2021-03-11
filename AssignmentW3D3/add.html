@@ -4,31 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        function displayOutPut() {
-           
-     let input = Number(document.getElementById('input').value);
-    
-
-    document.getElementById('output').innerHTML = input;
-    
-}
-
-document.getElementById('output').addEventListener('click to add', displayOutPut());
-       
+    <title>display output</title>      
     </script>
 </head>
 <body>
-    <form>
+    
+    
     <label for="input">input<br></label>
     <input type="text" name="input" id="input"><br>
-
     <label for="output">output<br></label>
     <input type="text" name="output" id="output"><br>
-
-
-    <button type="click to add" value="input" onclick=" displayOutPut()">click to add</button>
-    </form>>
+    <button  onclick=" displayOutPut()">click to add</button>
+    <p><a href="home.html">home</a></p>
+    <script>
+        function displayOutPut() {
+     let input = document.getElementById('input').value;
+    document.getElementById('output').value = input; 
+    document.getElementById('input').value = ""; 
+        }
+        </script>
 </body>
 </html>
