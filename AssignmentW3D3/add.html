@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function displayOutPut() {
+           
+     let input = Number(document.getElementById('input').value);
+    
+
+    document.getElementById('output').innerHTML = input;
+    
+}
+
+document.getElementById('output').addEventListener('click to add', displayOutPut());
+       
+    </script>
+</head>
+<body>
+    <form>
+    <label for="input">input<br></label>
+    <input type="text" name="input" id="input"><br>
+
+    <label for="output">output<br></label>
+    <input type="text" name="output" id="output"><br>
+
+
+    <button type="click to add" value="input" onclick=" displayOutPut()">click to add</button>
+    </form>>
+</body>
+</html>
